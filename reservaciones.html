@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/funcionesReservaciones.js"></script>  
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+
+    <body>
+        <h1>Reservaciones</h1>
+        <ul> 
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="categoria.html">Categoria</a></li>
+            <li><a href="tool.html">Tool</a></li>
+            <li><a href="cliente.html">Cliente</a></li>
+            <li><a href="mensajes.html">Mensajes</a></li>
+            <li><a href="reportes.html">Reportes</a></li>
+           
+        </ul>
+
+        <label>Escoja la fecha de inicio de la reserva</label>
+        <input type="date" id="startDate"><br>
+        <label>Escoja la fecha de devolucion de la reserva</label>
+        <input type="date" id="devolutionDate"><br>
+        <label>Escoja el status de la reserva</label>
+        <select id="status">
+            <option value="completed">completada</option>
+            <option value="cancelled">cancelada</option>
+          </select><br>
+          <label>Escoja el cliente</label>
+        <select id="select-client"></select><br>
+        <label>Escoja la herramineta</label>
+        <select id="select-tool"></select>
+
+          <script type="text/javascript">
+            window.onload = getTool_Reservaciones();
+        </script>
+        
+        <script type="text/javascript">
+            window.onload = getClient_Reservaciones();
+        </script><br>
+
+        <script type="text/javascript">
+            window.onload = getReservaciones();
+        </script>
+        
+        <div id="resultado4"></div>
+
+        <button onclick="postReservaciones()">
+            Crear Reservacion
+        </button>
+
+    </body>
+</html>

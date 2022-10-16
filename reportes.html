@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/funcionesReportes.js"></script>  
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+
+    <body>
+        <h1>Reportes</h1>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="categoria.html">Categoria</a></li>
+            <li><a href="tool.html">Tool</a></li>
+            <li><a href="cliente.html">Cliente</a></li>
+            <li><a href="mensajes.html">Mensajes</a></li>
+            <li><a href="reservaciones.html">Reservaciones</a></li>
+            
+        </ul>
+
+        <button onclick="getStatus()">
+            Generar Reporte Status
+        </button><br>
+        <div id="resultado6"></div>
+        <label>fecha inicial</label>
+        <input type="date" id="startDate1">
+        <label>fecha final</label>
+        <input type="date" id="startDate2">
+        <button onclick="getFechas()">
+            Generar reporte de fechas
+        </button><br>
+        <div id="resultado7"></div>
+        <button onclick="getClientes()">
+            Generar reporte de clientes
+        </button>
+        <div id="resultado8"></div>
+    </body>
+</html>
